@@ -2,6 +2,7 @@
 // @name           activeCollab - Tickets Summary
 // @namespace      http://activeCollab.com/
 // @exclude        *
+// @version        1.0
 // ==/UserScript==
 
 var $ = unsafeWindow.$;
