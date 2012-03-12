@@ -3,6 +3,7 @@
 // @namespace      http://activeCollab.com/
 // @exclude        *
 // @version        1.0
+// @updateURL      https://github.com/bratanon/projCountTickets/raw/master/projCountTickets.user.js
 // ==/UserScript==
 
 var $ = unsafeWindow.$;
@@ -13,11 +14,11 @@ var defaultSummaryCss = {
 };
 
 $('#tickets h2.section_name').each(function() {
-	$summary = $('<div class="section_summary_div">')
-	  .text(countTickets($('+ div.section_container', this).children('ul.tickets_list')))
-	  .css(defaultSummaryCss);
+  $summary = $('<div class="section_summary_div">')
+    .text(countTickets($('+ div.section_container', this).children('ul.tickets_list')))
+    .css(defaultSummaryCss);
 
-	$(this).append($summary);
+  $(this).append($summary);
 });
 
 /*
